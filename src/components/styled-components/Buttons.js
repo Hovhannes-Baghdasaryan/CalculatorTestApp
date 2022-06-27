@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
 	border: none;
-	background-color: rgb(80, 60, 209);
+	background-color: #426ec7;
 	font-size: 25px;
 	color: rgb(255, 255, 255);
 	font-weight: bold;
@@ -32,12 +32,13 @@ export const Button = styled.button`
 				background-color: rgb(228, 39, 15);
 			}
 		`}
-`;
-
-export const LastRow = styled.div`
-	display: flex;
-	justify-content: space-between;
-	gap: 15px;
+	${props =>
+		isNaN(+props.element) &&
+		props.element !== "." &&
+		props.element !== "=" &&
+		css`
+			background-color: #808080;
+		`}
 `;
 
 export const Row = styled.div`

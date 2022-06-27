@@ -1,4 +1,4 @@
-import { Button, LastRow, Row } from "./styled-components/Buttons";
+import { Button, Row } from "./styled-components/Buttons";
 import { clickHandler } from "../utils/clickHandler";
 import { useDispatch } from "react-redux";
 
@@ -7,32 +7,13 @@ const ButtonComponent = ({ arr }) => {
 
 	return (
 		<>
-			{arr.length === 4 ? (
-				<Row>
-					{arr.map(item => (
-						<Button
-							key={item.id}
-							onClick={clickHandler(item, dispatch)}
-							data-testid="button_number"
-						>
-							{item.element}
-						</Button>
-					))}
-				</Row>
-			) : (
-				<LastRow>
-					{arr.map(item => (
-						<Button
-							key={item.id}
-							element={item.element}
-							onClick={clickHandler(item, dispatch)}
-							data-testid="button_number"
-						>
-							{item.element}
-						</Button>
-					))}
-				</LastRow>
-			)}
+			<Row>
+				{arr.map(item => (
+					<Button key={item.id} onClick={clickHandler(item, dispatch)} data-testid="button_number" element={item.element}>
+						{item.element}
+					</Button>
+				))}
+			</Row>
 		</>
 	);
 };

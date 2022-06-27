@@ -11,7 +11,7 @@ export const ScreenStyles = styled.div`
 	width: 100%;
 	margin-bottom: 10px;
 	padding: 0 10px;
-	background-color: #4357692d;
+	background-color: #220189;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
