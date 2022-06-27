@@ -66,7 +66,7 @@ const Values = [
 ];
 
 it("props passing the main Values", () => {
-	const { getAllByTestId } = render(withRedux(<ButtonsMap Values={Values} />));
+	const { getAllByTestId } = render(withRedux(<ButtonsMap />));
 
 	Values.forEach((element, index) => {
 		element.arr.forEach((e, i) => {
